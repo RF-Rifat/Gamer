@@ -1,0 +1,224 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Work Sans", sans-serif;
+}
+
+/* shared styles */
+.content-header {
+  color: #0b0223;
+  font-family: Work Sans;
+  font-size: 3rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.clr-header {
+  background: linear-gradient(180deg, #f948b2 0%, #8758f1 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+p {
+  color: #534c64;
+  text-align: right;
+  font-family: Work Sans;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.8rem;
+}
+.btn {
+  border-radius: 3rem;
+  background: var(--linear, linear-gradient(90deg, #ff42a5 0%, #ff42a5 100%));
+  padding: 1rem 2rem;
+  color: #fff;
+  font-family: Work Sans;
+  font-size: 1.25rem;
+  font-weight: 600;
+  border: none;
+}
+
+/* header styles*/
+nav {
+  display: flex;
+  background: #fff;
+  box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem 10rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.gamer {
+  color: #0b0223;
+  font-family: Work Sans;
+  font-size: 2.8125rem;
+  font-weight: 700;
+}
+.gamer span {
+  background: var(--linear, linear-gradient(90deg, #ff42a5 0%, #ff42a5 100%));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav li {
+  margin-right: 1.5rem;
+  align-self: center;
+}
+
+nav li a {
+  text-decoration: none;
+  color: #333;
+  border-radius: 5px;
+}
+
+.nav-btn {
+  display: flex;
+  align-items: center;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  align-self: center;
+  border-radius: 0.5rem;
+  background: rgba(11, 2, 35, 0.1);
+  gap: 1rem;
+}
+
+/* banner section styles */
+
+.banner-container {
+  display: flex;
+  align-items: center;
+}
+.banner-img {
+  padding: 1.5rem 10rem;
+  display: flex;
+}
+.banner-bg-img {
+  background-image: url("images/Group\ 14.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.banner-img img {
+  width: 100%;
+  max-width: 100%;
+  align-self: center;
+}
+.banner-content {
+  padding: 4rem 10rem;
+}
+
+.musk-img {
+  background: linear-gradient(180deg, #f948b2 0%, #8758f1 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: Work Sans;
+  font-size: 5.7rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+.game-content {
+  color: #534c64;
+  font-family: Work Sans;
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-transform: lowercase;
+  margin-bottom: 1.5rem;
+}
+
+.btn-2 {
+  background-color: #4ec5f7;
+  border-radius: 3rem;
+  padding: 1rem 2rem;
+  color: #fff;
+  font-family: Work Sans;
+  font-size: 1.25rem;
+  font-weight: 600;
+  border: none;
+}
+/* header styles end */
+
+/* Gamers section */
+.gamers-section {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 66, 165, 0.03) 0%,
+    rgba(255, 66, 165, 0.03) 100%
+  );
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 10rem;
+}
+.gamers-content{
+  text-align: right;
+}
+.gamers-content h2,
+.gamers-content p,
+.gamers-content a button{
+  margin-top: 1rem;
+}
+/* Responsive styles */
+@media screen and (max-width: 560px) {
+  nav,
+  nav > ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  .banner-container {
+    flex-direction: column-reverse;
+    font-size: 10px;
+  }
+
+  .nav-title {
+    margin-bottom: 1rem;
+  }
+
+  nav ul {
+    margin-top: 1rem;
+  }
+
+  .nav-btn {
+    margin-top: 1rem;
+  }
+}
+@media screen and (min-width: 560px) and (max-width: 960px) {
+  nav,
+  nav > ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  .banner-container {
+    flex-direction: column-reverse;
+    font-size: 10px;
+  }
+
+  .nav-title {
+    margin-bottom: 1rem;
+  }
+
+  nav ul {
+    margin-top: 1rem;
+  }
+
+  .nav-btn {
+    margin-top: 1rem;
+  }
+}
