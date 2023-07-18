@@ -26,11 +26,13 @@ body {
 }
 p {
   color: #534c64;
-  text-align: right;
   font-family: Work Sans;
   font-size: 1.125rem;
   font-weight: 400;
   line-height: 1.8rem;
+}
+.text-center{
+  text-align: center;
 }
 .btn {
   border-radius: 3rem;
@@ -48,7 +50,7 @@ nav {
   display: flex;
   background: #fff;
   box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.05);
-  padding: 1.5rem 10rem;
+  padding: 1.5cqw 10cqw;
   justify-content: space-between;
   align-items: center;
 }
@@ -106,7 +108,7 @@ nav li a {
   align-items: center;
 }
 .banner-img {
-  padding: 1.5rem 10rem;
+  padding: 1.5cqw 10cqw;
   display: flex;
 }
 .banner-bg-img {
@@ -120,7 +122,7 @@ nav li a {
   align-self: center;
 }
 .banner-content {
-  padding: 4rem 10rem;
+  padding: 4cqw 10cqw;
 }
 
 .musk-img {
@@ -165,7 +167,7 @@ nav li a {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem 10rem;
+  padding: 2cqw 10cqw;
 }
 .gamers-content{
   text-align: right;
@@ -175,10 +177,69 @@ nav li a {
 .gamers-content a button{
   margin-top: 1rem;
 }
+.gamers-img img{
+  width: 100%;
+}
+
+/* card img container */
+.card-img-container{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  padding: 2cqw 10cqw;
+  gap: 1cqw;
+}
+.img-card img{
+  width: 100%;
+}
+.img-card:hover .img-hover {
+  filter: brightness(50%);
+  border: #ff8e8e solid 3px;
+  border-radius: 1.2rem;
+}
+.img-card {
+  position: relative;
+}
+
+.img-container {
+  position: relative;
+}
+.play-button {
+  font-family: "Font Awesome 5 Free";
+  font-size: 40px;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease; 
+}
+
+.img-container:hover .play-button {
+  opacity: 1;
+}
+
+.img-hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.img-container:hover::before {
+  opacity: 1;
+}
+
 /* Responsive styles */
 @media screen and (max-width: 560px) {
   nav,
-  nav > ul {
+  nav > ul,
+  .gamers-section {
     flex-direction: column;
     align-items: center;
   }
@@ -197,11 +258,15 @@ nav li a {
 
   .nav-btn {
     margin-top: 1rem;
+  }
+  .card-img-container{
+    grid-template-columns: 1fr;
   }
 }
 @media screen and (min-width: 560px) and (max-width: 960px) {
   nav,
-  nav > ul {
+  nav > ul,
+  .gamers-section{
     flex-direction: column;
     align-items: center;
   }
@@ -220,5 +285,8 @@ nav li a {
 
   .nav-btn {
     margin-top: 1rem;
+  }
+  .card-img-container{
+    grid-template-columns: 1fr 1fr;
   }
 }
