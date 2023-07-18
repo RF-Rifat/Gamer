@@ -14,7 +14,7 @@ body {
 .content-header {
   color: #0b0223;
   font-family: Work Sans;
-  font-size: 3rem;
+  font-size: 3.2cqw;
   font-weight: 600;
   text-transform: uppercase;
 }
@@ -27,7 +27,7 @@ body {
 p {
   color: #534c64;
   font-family: Work Sans;
-  font-size: 1.125rem;
+  font-size: 1.125cqw;
   font-weight: 400;
   line-height: 1.8rem;
 }
@@ -43,6 +43,10 @@ p {
   font-size: 1.25rem;
   font-weight: 600;
   border: none;
+}
+
+.padding{
+  padding: 2cqw 10cqw;
 }
 
 /* header styles*/
@@ -131,7 +135,7 @@ nav li a {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: Work Sans;
-  font-size: 5.7rem;
+  font-size: 5.7cqw;
   font-weight: 800;
   margin-bottom: 1rem;
 }
@@ -171,6 +175,7 @@ nav li a {
 }
 .gamers-content{
   text-align: right;
+  flex: 1;
 }
 .gamers-content h2,
 .gamers-content p,
@@ -193,7 +198,7 @@ nav li a {
 }
 .img-card:hover .img-hover {
   filter: brightness(50%);
-  border: #ff8e8e solid 3px;
+  outline: #ff8e8e solid 3px;
   border-radius: 1.2rem;
 }
 .img-card {
@@ -235,17 +240,43 @@ nav li a {
   opacity: 1;
 }
 
+.game-poster-container{
+  display: flex;
+  gap: 8cqw;
+  justify-content: center;
+  align-items: center;
+}
+.game-poster-img{
+  flex: 1;
+  position: relative;
+}
+.game-poster-content{
+  flex: 1;
+}
+.poster-img-1{
+  width: 100%;
+}
+.poster-img-2{
+  position: absolute;
+  top: 60%;
+  left: 70%;
+  width: 50%;
+}
+
 /* Responsive styles */
 @media screen and (max-width: 560px) {
   nav,
   nav > ul,
-  .gamers-section {
+  .gamers-section,
+  .game-poster-container {
     flex-direction: column;
     align-items: center;
+    text-align: center;
   }
   .banner-container {
     flex-direction: column-reverse;
     font-size: 10px;
+    text-align: center;
   }
 
   .nav-title {
@@ -255,12 +286,23 @@ nav li a {
   nav ul {
     margin-top: 1rem;
   }
-
+  p{
+    font-size: 2cqw;
+  }
+  .content-header{
+    font-size: 4cqw;
+  }
   .nav-btn {
     margin-top: 1rem;
   }
   .card-img-container{
     grid-template-columns: 1fr;
+  }
+  .poster-img-2{
+    left: 55%;
+  }
+  .game-poster-container{
+    gap: 20cqw;
   }
 }
 @media screen and (min-width: 560px) and (max-width: 960px) {
