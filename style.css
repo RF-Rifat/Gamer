@@ -271,6 +271,10 @@ nav li a {
  justify-content: center;
  gap: 2cqw;
 }
+.game:hover{
+  cursor: pointer;
+  outline: 2px solid #ababab;
+}
 .game {
   border-radius: 3.125rem;
   background: #fff;
