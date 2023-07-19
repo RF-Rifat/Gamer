@@ -14,7 +14,7 @@ body {
 .content-header {
   color: #0b0223;
   font-family: Work Sans;
-  font-size: 3.2cqw;
+  font-size: 3.8cqw;
   font-weight: 600;
   text-transform: uppercase;
 }
@@ -337,6 +337,8 @@ footer{
 
 /* footer end */
 /* Responsive styles */
+
+/* phone and small devices */
 @media screen and (max-width: 560px) {
   nav,
   nav > ul,
@@ -402,6 +404,8 @@ footer{
   }
 
 }
+
+/* Tab and medium devices */
 @media screen and (min-width: 560px) and (max-width: 960px) {
   nav,
   nav > ul,
